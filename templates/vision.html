@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+		<meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <title>CIFAR-10 Responsive Image Grid</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="description" content="Image Grid - Cycling through CIFAR-10 images in a responsive grid." />
+        <meta name="keywords" content="grid, images, thumbnails, responsive, css3, jquery, javascript, random, transition, 3d, perspective" />
+        <meta name="author" content="Codrops" />
+        <link rel="shortcut icon" href="../favicon.ico"> 
+        <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='demo.css')}}" />
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}" />
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+		<script type="text/javascript" src="{{url_for('static', filename='modernizr.custom.26633.js')}}"></script> 
+		<noscript>
+			<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='fallback.css')}}" />
+		</noscript>
+		
+    </head>
+    <body>
+		<div class="container">
+			
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="{{ url_for('home') }}">
+                    <strong>&laquo; Home &raquo;</strong>
+                </a>
+
+                <a href="{{ url_for('cifar10info') }}">
+                    <strong>&laquo; CIFAR-10 Dataset &raquo;</strong>
+                </a>
+
+                <a href="{{ url_for('vision') }}">
+                    <strong>&laquo; CIFAR-10 Image Grid &raquo;</strong>
+                </a>
+
+                 <a href="{{ url_for('neuralnet') }}">
+                    <strong>&laquo; Convolutional Neural Network Basics &raquo;</strong>
+                </a>  
+            </div><!--/ Codrops top bar -->
+			
+			<header class="codrops-header">
+			
+				<h1>CIFAR-10 Image Grid</h1>
+
+				<hr>
+
+				<p style="font-size: 18px">Hover over an image in the grid to view another</p>
+				<p style="font-size: 18px">random image in the CIFAR-10 data set.</p>
+
+				<hr>
+				
+			<!-- 	<nav class="codrops-demos">
+					<a href="index.html">Demo 1</a>
+					<a href="index2.html">Demo 2</a>
+					<a href="index3.html">Demo 3</a>
+					<a href="index4.html">Demo 4</a>
+					<a class="current-demo" href="index5.html">Demo 5</a>
+				</nav>
+ -->
+			</header>
+			
+			<section class="main">
+
+				<div id="ri-grid" class="ri-grid ri-grid-size-1 ri-shadow">
+					<img class="ri-loading-image" src="{{url_for('static', filename='loading.gif')}}"/>
+					<ul>
+						<li><a href="#"><img src="{{url_for('static', filename='00.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='01.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='02.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='03.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='04.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='05.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='06.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='07.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='08.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='09.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='010.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='011.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='012.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='013.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='014.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='015.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='016.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='017.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='018.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='019.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='020.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='021.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='022.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='023.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='024.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='025.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='026.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='027.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='028.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='029.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='030.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='031.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='032.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='033.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='034.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='035.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='036.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='037.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='038.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='039.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='040.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='041.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='042.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='043.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='044.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='045.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='046.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='047.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='048.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='049.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='050.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='051.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='052.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='053.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='054.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='55.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='56.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='57.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='58.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='59.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='60.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='61.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='62.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='63.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='64.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='65.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='66.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='67.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='68.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='69.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='70.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='71.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='72.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='73.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='74.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='75.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='76.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='77.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='78.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='79.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='80.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='81.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='82.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='83.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='84.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='85.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='86.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='87.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='88.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='89.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='90.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='91.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='92.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='93.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='94.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='95.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='96.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='97.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='98.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='99.jpg')}}"/></a></li>
+						<li><a href="#"><img src="{{url_for('static', filename='100.jpg')}}"/></a></li>
+					</ul>
+				</div>
+				
+			</section>
+			
+        </div>
+
+        <hr>
+
+        <p class="codrops-info"><a href="{{ url_for('neuralnet') }}"> Next: Convolutional Neural Network - Basics <img border="0" alt="Conv Neural Net" src="{{url_for('static', filename='arcreactor.gif')}}" width="80" height="80" align="center"></a></p>
+
+		<hr>
+
+		<p style="font-size: 15px" class="codrops-info">Animated Responsive Image Grid courtesy of:<a href="http://tympanus.net/codrops/2012/08/02/animated-responsive-image-grid/"> codrops <img border="0" alt="codrops" src="{{url_for('static', filename='codrops.png')}}" width="24" height="24" align="top"></a></p>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script> window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
+		<script type="text/javascript" src="{{url_for('static', filename='jquery.gridrotator.js')}}"></script>
+		<script type="text/javascript">	
+			$(function() {
+			
+				$( '#ri-grid' ).gridrotator( {
+					animSpeed : 300,
+					animType : 'rotateBottom',
+					w320 : {
+						rows : 3,
+						columns : 4
+					},
+					w240 : {
+						rows : 3,
+						columns : 3
+					},
+					slideshow : false,
+					onhover : true
+				} );
+			
+			});
+		</script>
+    </body>
+</html>

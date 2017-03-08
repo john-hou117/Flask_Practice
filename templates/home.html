@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Convolutional Neural Networks</title>
+		<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='demo.css')}}" />
+		<link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+	</head>
+
+	<style>
+		body  {
+    		background-image: url("{{url_for('static', filename='netgif.gif')}}");
+    		background-color: #aaaaaa;
+    		background-size: cover 
+		}
+	</style>
+
+	<body>
+		<div class="container">
+			
+			<!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="https://github.com/john-hou117">
+                    <strong>&laquo; My Github &raquo;</strong>
+                </a>
+            </div><!--/ Codrops top bar -->
+		</div>
+
+		<header class="codrops-header">
+			
+			<h1>START HERE</h1>
+			<p>
+			<a href="{{ url_for('cifar10info') }}">
+				<img border="0" alt="vision" src="{{url_for('static', filename='seeingobjectsanimation.gif')}}" width="400" height="400">
+			</a>
+			</p>
+			<a href="{{ url_for('cifar10info') }}">
+				<img border="0" alt="vision" src="{{url_for('static', filename='object_recog.jpg')}}" width="350" height="350">
+			</a>
+
+			<a href="{{ url_for('neuralnet') }}">
+				<img border="0" alt="vision" src="{{url_for('static', filename='terminator.gif')}}" width="350" height="350">
+			</a>
+        
+        </header>
+
+		<!-- <img src="{{url_for('static', filename='f22.png')}}", usemap="#buttonmap" />
+		<map name="buttonmap">
+  		<area shape="rect" coords="0,0,82,126" alt="Sun" href="{{ url_for('vision') }}">
+		</map> -->
+
+		<p><a href="{{ url_for('vision') }}">Go to the Vision page!</a></p>
+
+		<button type='submit'>BEGIN</button>
+
+	</body>
+
+</html>
