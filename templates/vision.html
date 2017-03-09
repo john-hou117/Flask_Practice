@@ -24,31 +24,39 @@
 			
 			<!-- Codrops top bar -->
             <div class="codrops-top">
-                <a href="{{ url_for('home') }}">
+                <a href="{{ url_for('home') }}", style="color:indigo;">
                     <strong>&laquo; Home &raquo;</strong>
                 </a>
 
-                <a href="{{ url_for('cifar10info') }}">
+                <a href="{{ url_for('cifar10info') }}", style="color:indigo;">
                     <strong>&laquo; CIFAR-10 Dataset &raquo;</strong>
                 </a>
 
-                <a href="{{ url_for('vision') }}">
+                <a href="{{ url_for('vision') }}", style="color:indigo;">
                     <strong>&laquo; CIFAR-10 Image Grid &raquo;</strong>
                 </a>
 
-                 <a href="{{ url_for('neuralnet') }}">
-                    <strong>&laquo; Convolutional Neural Network Basics &raquo;</strong>
-                </a>  
+                 <a href="{{ url_for('neuralnet') }}", style="color:indigo;">
+                    <strong>&laquo; ConvNet Basics &raquo;</strong>
+                </a>
+
+                 <a href="{{ url_for('convarch') }}", style="color:indigo;">
+                    <strong>&laquo; ConvNet Architecture &raquo;</strong>
+                </a>
+
+                <a href="https://github.com/john-hou117", style="color:indigo;" target="_blank">
+                    <strong>&laquo; My Github &raquo;</strong>
+                </a>
             </div><!--/ Codrops top bar -->
 			
 			<header class="codrops-header">
 			
-				<h1>CIFAR-10 Image Grid</h1>
+				<h1 style="color:dimgrey;">CIFAR-10 Image Grid</h1>
 
 				<hr>
 
-				<p style="font-size: 18px">Hover over an image in the grid to view another</p>
-				<p style="font-size: 18px">random image in the CIFAR-10 data set.</p>
+				<p style="font-size: 18px; color:dimgrey;">Hover over an image in the grid to view another</p>
+				<p style="font-size: 18px; color:dimgrey;">random image in the CIFAR-10 data set.</p>
 
 				<hr>
 				
@@ -177,11 +185,11 @@
 
         <hr>
 
-        <p class="codrops-info"><a href="{{ url_for('neuralnet') }}"> Next: Convolutional Neural Network - Basics <img border="0" alt="Conv Neural Net" src="{{url_for('static', filename='arcreactor.gif')}}" width="80" height="80" align="center"></a></p>
+        <p class="codrops-info", style="color:dimgrey;"><a href="{{ url_for('neuralnet') }}"> Next: Convolutional Neural Network - Basics <img border="0" alt="Conv Neural Net" src="{{url_for('static', filename='arcreactor.gif')}}" width="80" height="80" align="center"></a></p>
 
 		<hr>
 
-		<p style="font-size: 15px" class="codrops-info">Animated Responsive Image Grid courtesy of:<a href="http://tympanus.net/codrops/2012/08/02/animated-responsive-image-grid/"> codrops <img border="0" alt="codrops" src="{{url_for('static', filename='codrops.png')}}" width="24" height="24" align="top"></a></p>
+		<p style="font-size: 15px; color:dimgrey;" class="codrops-info">Animated Responsive Image Grid courtesy of:<a href="http://tympanus.net/codrops/2012/08/02/animated-responsive-image-grid/"> codrops <img border="0" alt="codrops" src="{{url_for('static', filename='codrops.png')}}" width="24" height="24" align="top"></a></p>
 
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
         <script> window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>

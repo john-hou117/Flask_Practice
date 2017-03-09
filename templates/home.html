@@ -9,9 +9,9 @@
 
 	<style>
 		body  {
-    		background-image: url("{{url_for('static', filename='netgif.gif')}}");
-    		background-color: #aaaaaa;
-    		background-size: cover 
+    		/*background-image: url("{{url_for('static', filename='matrix_agents.gif')}}");*/
+    		background-color: #171c17;
+    		/*background-size: cover */
 		}
 	</style>
 
@@ -20,27 +20,21 @@
 			
 			<!-- Codrops top bar -->
             <div class="codrops-top">
-                <a href="https://github.com/john-hou117">
+                <a href="https://github.com/john-hou117", style="color:indigo;" target="_blank">
                     <strong>&laquo; My Github &raquo;</strong>
                 </a>
             </div><!--/ Codrops top bar -->
 		</div>
 
 		<header class="codrops-header">
-			
-			<h1>START HERE</h1>
+
+			<p style="font-size: 26px; color:#00cc00; text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;">Image Recognition: ConvNets and the CIFAR-10</p>
+			<hr>
 			<p>
 			<a href="{{ url_for('cifar10info') }}">
-				<img border="0" alt="vision" src="{{url_for('static', filename='seeingobjectsanimation.gif')}}" width="400" height="400">
+				<img border="0" alt="vision" src="{{url_for('static', filename='matrix_agents.gif')}}" width="1060" height="400">
 			</a>
 			</p>
-			<a href="{{ url_for('cifar10info') }}">
-				<img border="0" alt="vision" src="{{url_for('static', filename='object_recog.jpg')}}" width="350" height="350">
-			</a>
-
-			<a href="{{ url_for('neuralnet') }}">
-				<img border="0" alt="vision" src="{{url_for('static', filename='terminator.gif')}}" width="350" height="350">
-			</a>
         
         </header>
 
@@ -48,10 +42,6 @@
 		<map name="buttonmap">
   		<area shape="rect" coords="0,0,82,126" alt="Sun" href="{{ url_for('vision') }}">
 		</map> -->
-
-		<p><a href="{{ url_for('vision') }}">Go to the Vision page!</a></p>
-
-		<button type='submit'>BEGIN</button>
 
 	</body>
 

@@ -1,6 +1,4 @@
 from flask import Flask, render_template, url_for
-import cPickle
-import matplotlib.pyplot as plt
 
 
 app=Flask(__name__)
@@ -20,6 +18,10 @@ def cifar10info():
 @app.route('/neuralnet')
 def neuralnet():
 	return render_template('neuralnet.html')
+
+@app.route('/convarch')
+def convarch():
+	return render_template('convarch.html')
 
 if __name__ == '__main__':
     app.run()

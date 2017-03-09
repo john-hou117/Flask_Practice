@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <title>Inside the Convolutional Neural Network</title>
+    <title>Convolutional Neural Networks - Basics</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{url_for('static', filename='demo.css')}}">
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
@@ -16,38 +16,55 @@
        <div class="container">
             <!-- Codrops top bar -->
             <div class="codrops-top">
-                <a href="{{ url_for('home') }}">
+                <a href="{{ url_for('home') }}", style="color:indigo;">
                     <strong>&laquo; Home &raquo;</strong>
                 </a>
 
-                <a href="{{ url_for('cifar10info') }}">
+                <a href="{{ url_for('cifar10info') }}", style="color:indigo;">
                     <strong>&laquo; CIFAR-10 Dataset &raquo;</strong>
                 </a>
 
-                <a href="{{ url_for('vision') }}">
+                <a href="{{ url_for('vision') }}", style="color:indigo;">
                     <strong>&laquo; CIFAR-10 Image Grid &raquo;</strong>
                 </a>
 
-                 <a href="{{ url_for('neuralnet') }}">
-                    <strong>&laquo; Convolutional Neural Network Basics &raquo;</strong>
+                 <a href="{{ url_for('neuralnet') }}", style="color:indigo;">
+                    <strong>&laquo; ConvNet Basics &raquo;</strong>
+                </a>
+
+                 <a href="{{ url_for('convarch') }}", style="color:indigo;">
+                    <strong>&laquo; ConvNet Architecture &raquo;</strong>
+                </a>
+
+                <a href="https://github.com/john-hou117", style="color:indigo;" target="_blank">
+                    <strong>&laquo; My Github &raquo;</strong>
                 </a>
             </div><!--/ Codrops top bar -->
         </div>
 
 
         <header class="codrops-header">
-            <h1>Convolutional Neural Networks</h1>
-            
+            <h1 style="color:slategrey;">Convolutional Neural Networks - Basics</h1>
+            <hr>
+            <hr>
+            <img border="20" alt="net" src="{{url_for('static', filename='terminator.gif')}}" width="640" height="300">
+            <hr>
+            <p style="font-size: 18px; color:darkred;">&laquo; T-800 image recognition &raquo;</p>
+            <hr>
+            <hr>
             <hr>
 
-            <p style="font-size: 26px">Convolutional Neural Networks: What are they?</p>
-            <p style="font-size: 18px">&bull; Type of neural network that has proven successful</p>
-            <p style="font-size: 18px">in image recognition and object classification.</p>
-            <p style="font-size: 18px">&bull; Also known as CNNs or ConvNets.</p>
+            <p style="font-size: 26px; color:slategrey;">Convolutional Neural Networks: What are they?</p>
+            <p style="font-size: 18px; color:purple">&bull; Type of neural network that has proven</p>
+            <p style="font-size: 18px; color:purple">successful in image recognition</p>
+            <p style="font-size: 18px; color:purple">and object classification.</p>
+            <p style="font-size: 18px; color:purple">&bull; Also known as CNNs or ConvNets.</p>
 
             <hr>
+            <hr>
+            <hr>
 
-            <p style="font-size: 26px">Why are ConvNets important? Where are they used?</p>
+            <p style="font-size: 26px; color:slategrey;">Why are ConvNets important? Where are they used?</p>
             <a href="https://youtu.be/4KlYdCBdjEg?t=14s" target="_blank">
                 <img border="20" alt="Robot Vision" src="{{url_for('static', filename='k2sogif.gif')}}" width="500" height="250">
             </a>
@@ -56,35 +73,107 @@
                 <img border="20" alt="Uber Self-Driving Car" src="{{url_for('static', filename='uberselfdrivingcar.gif')}}" width="500" height="250">
             </a>
             
-            <p style="font-size: 18px">&bull; Robot Vision and Self-Driving Cars</p>
+            <p style="font-size: 18px; color: darkmagenta;">&laquo; Robot Vision and Self-Driving Cars &raquo;</p>
 
             <hr>
 
-            <p style="font-size: 26px">Basic Building Blocks of ConvNets:</p>
-            <p style="font-size: 18px">&bull; Convolution</p>
-            <p style="font-size: 18px">&bull; Pooling</p>
-            <p style="font-size: 18px">&bull; Fully Connected Layer (Classification)</p>
+            <hr>
+            <hr>
+            
+            <p style="font-size: 26px; color:slategrey;">Basic Building Blocks of ConvNets:</p>
+            <p style="font-size: 18px; color:purple">&bull; Convolution</p>
+            <p style="font-size: 18px; color:purple">&bull; Rectified Linear Unit (ReLU)</p>
+            <p style="font-size: 18px; color:purple">&bull; Pooling</p>
+            <p style="font-size: 18px; color:purple">&bull; Fully Connected Layer (Classification)</p>
 
             <hr>
+            <hr>
+            <hr>
 
-            <p>Convolution:</p>
+            <p style="font-size: 26px; color:slategrey;">Convolution:</p>
             <p>
             <img border="0" alt="codrops" src="{{url_for('static', filename='convolution.gif')}}" width="700" height="500" align="center">
+            <p style="font-size: 18px; color:green">&bull; Green = Original Image (5x5 matrix)</p>
+            <p style="font-size: 18px; color:orange">&bull; Yellow = Filter (3x3 matrix), aka Feature Detector</p>
+            <p style="font-size: 18px; color:red">&bull; Red = Dot Product of Green and Yellow = Convolved Feature (aka Feature Map)</p>
+            <p style="font-size: 18px; color:indigo">&bull; Primary Purpose of Convolution = Detect Features (e.g. edges) in the image</p>
             </p>
 
             <hr>
 
-            <p>Feature Map:</p>
+            <p style="font-size: 26px; color:slategrey;">Feature Map:</p>
             <p>
-            <img border="0" alt="codrops" src="{{url_for('static', filename='filtergif.gif')}}" width="700" height="500" align="center">
+            <img border="0" alt="codrops" src="{{url_for('static', filename='filtergif.gif')}}" width="700" height="405" align="center">
+            <hr>
+            <p style="font-size: 18px; color:red">&bull; A filter (box w/ red outline) produces one feature map</p>
+            <p style="font-size: 18px; color:green">&bull; Another filter (box w/ green outline) produces another feature map</p>
+            </p>
+
+            <hr>
+            <hr>
+            <hr>
+
+            <p style="font-size: 26px; color:slategrey;">Rectified Linear Unit (ReLU):</p>
+            <p>
+            <img border="0" alt="codrops" src="{{url_for('static', filename='relu.png')}}" width="700" height="500" align="center">
+            <p style="font-size: 18px">&bull; After every convolution operation, an activation function, such as ReLU, is applied.</p>
+            <p style="font-size: 18px">&bull; All negative values become 0, while all values above 0 are unchanged.</p>
+            <p style="font-size: 18px; color:indigo">&bull; Primary Purpose of ReLU: introduce non-linearity (convolution is a linear process)</p>
+            <p style="font-size: 18px; color:indigo">into our ConvNet because it must learn from non-linear data (images).</p>
+
+            <hr>
+
+            <img border="0" alt="codrops" src="{{url_for('static', filename='rectifiedfeaturemap.png')}}" width="700" height="300" align="center">            
+            </p>
+
+            <hr>
+            <hr>
+            <hr>
+
+            <p style="font-size: 26px; color:slategrey;">Pooling:</p>
+            <p>
+            <img border="0" alt="pooling" src="{{url_for('static', filename='pooling.gif')}}" width="700" height="375" align="center">
+
+            <hr>
+
+            <p style="font-size: 18px">&bull; Pooling reduces # of parameters in our network and controls overfitting</p>
+            <p style="font-size: 18px">&bull; Types of Pooling: Max, Average, Sum</p>
+            <p style="font-size: 18px; color:indigo">&bull; Primary Purpose of Pooling: Reduce Dimensionality</p>
+
+            <hr>
+
+            <p style="font-size: 18px; color:purple"> Max Pooling:</p>
+            <img border="10" alt="maxpooling" src="{{url_for('static', filename='maxpooling.png')}}" width="500" height="500" align="center">
+            
+            </p>
+
+            <hr>
+            <hr>
+            <hr>
+
+            <p style="font-size: 26px; color:slategrey;">Fully Connected Layer:</p>
+            <p>
+            <img border="0" alt="pooling" src="{{url_for('static', filename='fullyconnectedlayer.png')}}" width="450" height="450" align="center">
             </p>
 
             <hr>
 
-            <p>Pooling:</p>
-            <p>
-            <img border="0" alt="codrops" src="{{url_for('static', filename='pooling.gif')}}" width="700" height="400" align="center">
-            </p>
+            <p style="font-size: 18px">&bull; The fully connected layer means that every neuron in the</p>
+            <p style="font-size: 18px;">previous layer is connected to every neuron in the next layer.</p>
+            <p style="font-size: 18px">&bull; Activation Function: Softmax (basically, logistic regression for multiple categories)</p>
+            <p style="font-size: 18px; color:indigo">&bull; Primary Purpose of Fully Connected Layer: use features from convolution</p>
+            <p style="font-size: 18px; color:indigo">and pooling layers for classifying the image. Our final result (since we used</p>
+            <p style="font-size: 18px; color:indigo">softmax) will be output probabilities for each class.</p>
+
+            <hr>
+
+            <img border="20" alt="dog_and_frog" src="{{url_for('static', filename='karpathygif.gif')}}" width="532" height="169">
+
+            <hr>
+
+            <p class="codrops-info", style="color:dimgrey;"><a href="{{ url_for('convarch') }}"> Next: Convolutional Neural Network - Architecture <img border="0" alt="ConvNet Architecture" src="{{url_for('static', filename='wile.gif')}}" width="80" height="80" align="center"></a></p>
+
+            <hr>
 
         </header>
 

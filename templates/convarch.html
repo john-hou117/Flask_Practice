@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Convolutional Neural Networks - Architecture</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{url_for('static', filename='demo.css')}}">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css">
+
+    <style>
+        .mySlides {display:none}
+        .w3-left, .w3-right, .w3-badge {cursor:pointer}
+        .w3-badge {height:13px;width:13px;padding:0}
+    </style>
+
+    <body>
+
+       <div class="container">
+            <!-- Codrops top bar -->
+            <div class="codrops-top">
+                <a href="{{ url_for('home') }}", style="color:indigo;">
+                    <strong>&laquo; Home &raquo;</strong>
+                </a>
+
+                <a href="{{ url_for('cifar10info') }}", style="color:indigo;">
+                    <strong>&laquo; CIFAR-10 Dataset &raquo;</strong>
+                </a>
+
+                <a href="{{ url_for('vision') }}", style="color:indigo;">
+                    <strong>&laquo; CIFAR-10 Image Grid &raquo;</strong>
+                </a>
+
+                 <a href="{{ url_for('neuralnet') }}", style="color:indigo;">
+                    <strong>&laquo; ConvNet Basics &raquo;</strong>
+                </a>
+
+                <a href="{{ url_for('convarch') }}", style="color:indigo;">
+                    <strong>&laquo; ConvNet Architecture &raquo;</strong>
+                </a>
+
+                <a href="https://github.com/john-hou117", style="color:indigo;" target="_blank">
+                    <strong>&laquo; My Github &raquo;</strong>
+                </a>
+            </div><!--/ Codrops top bar -->
+    </div>
+
+    <header class="codrops-header">
+        <h1 style="color:slategrey;">Convolutional Neural Networks - Architecture</h1>
+
+        <hr>
+        <hr>
+
+        <img border="20" alt="net" src="{{url_for('static', filename='simpleconvnet.png')}}" width="768" height="183">
+        
+        <hr>
+
+        <p style="font-size: 18px; color: darkmagenta;">&laquo; An example of a convolutional neural network &raquo;</p>
+
+        <hr>
+        <hr>
+        <hr>
+
+        <p>
+        <a href="http://interactive.blockdiag.com/?compression=deflate&src=eJxLyslPzk7JTExXqObyzCsoLSlW0LVTcM7PK8vPKS3JzM-LNwQJBKX6hEJYyFJGcCkwyzexIiA_PyczLx2i1KUovyC_tARTnzFcnzG6lAlcygTNSCNkI8Ect5zEkpJUqAtdUvOKU1HtNUaIG1lz1QIABHdKmw", target="_blank", style="font-size: 18px;color:indigo;">The directed acyclic graph (DAG) for the ConvNet we will run: <img border="0" alt="dag" src="{{url_for('static', filename='dagfornn.jpg')}}" width="100" height="100" align="center">
+        </a>
+        </p>
+
+        <hr>
+        <hr>
+
+        <hr>
+
+        <img border="0" alt="matrix" src="{{url_for('static', filename='matrixscroll.gif')}}" width="1024" height="550" align="center">
+
+        <hr>
+
+    </header>
+
+
+    </body>
+</html>

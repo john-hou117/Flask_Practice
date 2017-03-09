@@ -16,35 +16,43 @@
        <div class="container">
             <!-- Codrops top bar -->
             <div class="codrops-top">
-                <a href="{{ url_for('home') }}">
+                <a href="{{ url_for('home') }}", style="color:indigo;">
                     <strong>&laquo; Home &raquo;</strong>
                 </a>
 
-                <a href="{{ url_for('cifar10info') }}">
+                <a href="{{ url_for('cifar10info') }}", style="color:indigo;">
                     <strong>&laquo; CIFAR-10 Dataset &raquo;</strong>
                 </a>
 
-                <a href="{{ url_for('vision') }}">
+                <a href="{{ url_for('vision') }}", style="color:indigo;">
                     <strong>&laquo; CIFAR-10 Image Grid &raquo;</strong>
                 </a>
 
-                 <a href="{{ url_for('neuralnet') }}">
-                    <strong>&laquo; Convolutional Neural Network Basics &raquo;</strong>
+                 <a href="{{ url_for('neuralnet') }}", style="color:indigo;">
+                    <strong>&laquo; ConvNet Basics &raquo;</strong>
+                </a>
+
+                 <a href="{{ url_for('convarch') }}", style="color:indigo;">
+                    <strong>&laquo; ConvNet Architecture &raquo;</strong>
+                </a>
+
+                <a href="https://github.com/john-hou117", style="color:indigo;" target="_blank">
+                    <strong>&laquo; My Github &raquo;</strong>
                 </a>
             </div><!--/ Codrops top bar -->
         </div>
 
 
         <header class="codrops-header">
-            <h1>What is the CIFAR-10 dataset?</h1>
+            <h1 style="color:dimgrey;">What is the CIFAR-10 dataset?</h1>
             <hr>
-            <p style="font-size: 30px">The details:</p>
-            <p>&bull; 10 classes</p>
-            <p>&bull; 6,000 images per class</p>
-            <p>&bull; 60,000 <img border="0" alt="codrops" src="{{url_for('static', filename='rainbow.png')}}" width="48" height="48" align="center"> images</p>
-            <p>&bull; Each image: 32 x 32 pixels</p>
+            <p style="font-size: 30px; color:dimgrey;">The details:</p>
+            <p style="color:purple">&bull; 10 classes</p>
+            <p style="color:purple">&bull; 6,000 images per class</p>
+            <p style="color:purple">&bull; 60,000 <img border="0" alt="codrops" src="{{url_for('static', filename='rainbow.png')}}" width="48" height="48" align="center"> images</p>
+            <p style="color:purple">&bull; Each image: 32 x 32 pixels</p>
             <hr>
-            <p style="font-size: 30px" >The 10 classes are:</p>
+            <p style="font-size: 30px; color:dimgrey;">The 10 classes are:</p>
 
         </header>
 
@@ -78,11 +86,11 @@
 
         <hr>
 
-        <p class="codrops-info"><a href="{{ url_for('vision') }}"> Next: CIFAR-10 Image Grid <img border="0" alt="Image Grid" src="{{url_for('static', filename='cifar-grid.png')}}" width="100" height="48" align="bottom"></a></p>
+        <p class="codrops-info"; style="color:dimgrey;"><a href="{{ url_for('vision') }}"> Next: CIFAR-10 Images <img border="0" alt="Image Grid" src="{{url_for('static', filename='cifar-grid.png')}}" width="100" height="48" align="bottom"></a></p>
 
         <hr>
 
-        <p style="font-size: 15px" class="codrops-info">Slideshow code courtesy of:<a target="_blank" href="http://www.w3schools.com/w3css/w3css_slideshow.asp"> w3schools <img border="0" alt="codrops" src="{{url_for('static', filename='w3schools.jpg')}}" width="48" height="48" align="center"></a></p>
+        <p style="font-size: 15px; color:dimgrey;" class="codrops-info">Slideshow code courtesy of:<a target="_blank" href="http://www.w3schools.com/w3css/w3css_slideshow.asp"> w3schools <img border="0" alt="w3schools" src="{{url_for('static', filename='w3schools.jpg')}}" width="48" height="48" align="center"></a></p>
 
     <script>
         var slideIndex = 1;
